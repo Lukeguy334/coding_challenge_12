@@ -10,7 +10,6 @@ if (dashboardById === dashboardBySelector) {
 
 //Create a new div element
 const revenueCard = document.createElement('div');
-
 revenueCard.setAttribute('class', 'metric-card');
 revenueCard.setAttribute('id', 'revenueCard');
 
@@ -25,5 +24,23 @@ revenueCard.appendChild(value);
 
     dashboardById.appendChild(revenueCard);
     console.log('Revenue card added to the dashboard');
+
+// Task 2
+const metricCards = document.querySelectorAll('.metric-card');
+
+Array.from(metricCards).forEach((card) => {
+  const titleElement = card.querySelector('h3');
+  const valueElement = card.querySelector('p');
+
+  // Update title and value
+  if (titleElement && valueElement) {
+    titleElement.textContent += ' - Updated';
+    valueElement.textContent += ' - Updated';
+  
+    card.style.backgroundColor = 'lightgray';
+  }
+});
+
+console.log('Metric cards updated');
 
 });
