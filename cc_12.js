@@ -62,12 +62,13 @@ const addCustomerCards = () => {
     const customerCard = document.createElement('div');
     customerCard.setAttribute('class', 'customer-card');
     customerCard.textContent = name;
-    customerSection.appendChild(customerCard);
 
     customerCard.addEventListener('click', (event) => {
       console.log('Customer selected:', + name);
       event.stopPropagation();
     });
+
+    customerSection.appendChild(customerCard);
   });
 };
 
