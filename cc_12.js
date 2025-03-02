@@ -64,7 +64,7 @@ const addCustomerCards = () => {
     customerCard.textContent = name;
 
     customerCard.addEventListener('click', (event) => {
-      console.log('Customer selected:', + name);
+      console.log('Customer selected:', name);
       event.stopPropagation();
     });
 
