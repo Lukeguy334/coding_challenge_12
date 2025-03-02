@@ -1,4 +1,3 @@
-// Task 1
 document.addEventListener('DOMContentLoaded', () => {
 
 // Select the dashboard container
@@ -50,7 +49,7 @@ const removeProductItem = (event) => {
 };
 
 // Add event listeners
-const addProductButton = document.getElementById('addProduct');
+const addProductButton = document.getElementById('addProductButton');
 addProductButton.addEventListener('click', addProductItem);
 
 const inventoryList = document.getElementById('inventoryList');
