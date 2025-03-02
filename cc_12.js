@@ -69,11 +69,13 @@ const addCustomerCards = () => {
       event.stopPropagation();
     });
   });
-});
+};
 
 addCustomerCards();
 
 const customerSection = document.getElementById('customerSection');
 customerSection.addEventListener('click', (event) => {
   console.log('Customer section clicked');
+});
+
 });
