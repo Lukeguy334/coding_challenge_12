@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Select the dashboard container
 const createMetricCard = (id, title, value) => {
-
   const card = document.createElement('div');
   card.setAttribute('class', 'metric-card');
   card.setAttribute('id', id);
@@ -54,5 +53,19 @@ addProductButton.addEventListener('click', addProductItem);
 
 const inventoryList = document.getElementById('inventoryList');
 inventoryList.addEventListener('click', removeProductItem);
+
+const customerSection = document.getElementById('customerSection');
+customerSection.addEventListener('click', (event) => {
+  console.log('Customer section clicked');
+});
+
+const customerCards = document.querySelectorAll('.customer-card');
+customerCards.forEach((card) => {
+  card.addEventListener('click', (event) => {
+    console.log('Customer card clicked:');
+  
+ event.stopPropagation();
+    });
+  });
 
 });
