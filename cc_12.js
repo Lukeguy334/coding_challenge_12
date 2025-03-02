@@ -54,18 +54,26 @@ addProductButton.addEventListener('click', addProductItem);
 const inventoryList = document.getElementById('inventoryList');
 inventoryList.addEventListener('click', removeProductItem);
 
+const addCustomerCards = () => {
+  const customerSection = document.getElementById('customerSection');
+  const customerNames = ['John Doe', 'Jane Doe', 'Alice'];
+    
+  customerNames.forEach((name) => {
+    const customerCard = document.createElement('div');
+    customerCard.setAttribute('class', 'customer-card');
+    customerCard.textContent = name;
+    customerSection.appendChild(customerCard);
+
+    customerCard.addEventListener('click', (event) => {
+      console.log('Customer selected:', + name);
+      event.stopPropagation();
+    });
+  });
+});
+
+addCustomerCards();
+
 const customerSection = document.getElementById('customerSection');
 customerSection.addEventListener('click', (event) => {
   console.log('Customer section clicked');
-});
-
-const customerCards = document.querySelectorAll('.customer-card');
-customerCards.forEach((card) => {
-  card.addEventListener('click', (event) => {
-    console.log('Customer card clicked:');
-  
- event.stopPropagation();
-    });
-  });
-
 });
